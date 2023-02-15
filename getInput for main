@@ -1,0 +1,27 @@
+#include <fstream>
+#include <iostream>
+#include "School.h"
+using namespace std;
+
+int main()
+{
+ifstream inFile; //File input
+string temp; //temporary use string
+School currSchool;  //temp placeholder for current inputted school
+vector<School> mySchools;    //vector to store list of schools
+inFile.open("Distances.csv");  //Distances file opened
+getline(inFile,temp);          //gets header line removed
+
+while (!inFile.eof()) {         //input loop
+
+/******************************************
+* This area will assign the values to the 
+* current school
+******************************************/
+    
+    mySchools.push_back(currSchool); //puts current school at the back of list
+    
+    //We should probably deconstruct currSchool or something similar so the data doesn't carry over
+}
+return 0;
+}
